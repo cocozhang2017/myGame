@@ -1,0 +1,83 @@
+
+.tetris-layout[data-v-e876a46c] {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: center;
+}
+.tetris-side-panel[data-v-e876a46c] {
+  min-width: 120px;
+}
+.panel-box[data-v-e876a46c] {
+  background: #1a1a2e;
+  border: 1px solid #0f3460;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+.panel-title[data-v-e876a46c] {
+  color: #409EFF;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.next-preview[data-v-e876a46c] {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+.preview-grid[data-v-e876a46c] {
+  display: grid;
+  grid-template-columns: repeat(4, 14px);
+  grid-template-rows: repeat(3, 14px);
+  gap: 1px;
+}
+.preview-cell[data-v-e876a46c] {
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+}
+.tetris-board-wrapper[data-v-e876a46c] {
+  padding: 12px !important;
+}
+.tetris-board[data-v-e876a46c] {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 2px solid #0f3460;
+  line-height: 0;
+}
+.tetris-row[data-v-e876a46c] {
+  display: flex;
+}
+.tetris-cell[data-v-e876a46c] {
+  width: 28px;
+  height: 28px;
+  box-sizing: border-box;
+  border: 1px solid #0a0a1a;
+  transition: background-color 0.05s;
+}
+.controls-list[data-v-e876a46c] {
+  font-size: 12px;
+  color: #aaa;
+}
+.control-item[data-v-e876a46c] {
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+kbd[data-v-e876a46c] {
+  background: #0a0a1a;
+  border: 1px solid #0f3460;
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 11px;
+  color: #409EFF;
+  font-family: monospace;
+  min-width: 20px;
+  text-align: center;
+}
+

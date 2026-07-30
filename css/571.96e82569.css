@@ -1,0 +1,190 @@
+
+.game-container[data-v-1262a641] {
+  background: #0a0a1a;
+  border: 2px solid #0f3460;
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Courier New', monospace;
+}
+.game-header h2[data-v-1262a641] {
+  color: #409eff;
+  margin: 0 0 12px 0;
+  text-align: center;
+  font-size: 22px;
+}
+.game-info[data-v-1262a641] {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+.game-info span[data-v-1262a641] {
+  color: #409eff;
+  font-size: 16px;
+  font-weight: bold;
+}
+.game-canvas-wrapper[data-v-1262a641] {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+.grid-wrapper[data-v-1262a641] {
+  display: inline-block;
+  border: 2px solid #0f3460;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.grid[data-v-1262a641] {
+  display: grid;
+  background: #0a0a1a;
+}
+.cell[data-v-1262a641] {
+  box-sizing: border-box;
+  border: 1px solid #363636;
+  background: #0a0a1a;
+  transition: background-color 0.05s;
+}
+.cell-head[data-v-1262a641] {
+  background-color: #15ff00;
+  border-color: #15ff00;
+  border-radius: 3px;
+  z-index: 2;
+}
+.cell-body[data-v-1262a641] {
+  background-color: #086600;
+  border-color: #086600;
+  border-radius: 2px;
+}
+.cell-food[data-v-1262a641] {
+  background-color: #d87bf0;
+  border-color: #d87bf0;
+  border-radius: 50%;
+}
+.game-actions[data-v-1262a641] {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.game-actions .el-button[data-v-1262a641] {
+  min-width: 100px;
+}
+.game-instructions[data-v-1262a641] {
+  text-align: center;
+  color: #888;
+  font-size: 13px;
+  padding: 12px;
+  border-top: 1px solid #1a1a3a;
+  margin-top: 8px;
+}
+.game-instructions p[data-v-1262a641] {
+  margin: 0;
+}
+.game-instructions strong[data-v-1262a641] {
+  color: #409eff;
+}
+
+/* 弹窗深色主题适配 */
+[data-v-1262a641] .el-dialog {
+  background: #0a0a1a;
+  border: 2px solid #0f3460;
+  border-radius: 12px;
+}
+[data-v-1262a641] .el-dialog__title {
+  color: #409eff;
+  font-size: 20px;
+}
+[data-v-1262a641] .el-dialog__body p {
+  color: #ccc;
+}
+[data-v-1262a641] .el-dialog__headerbtn .el-dialog__close {
+  color: #888;
+}
+
+/* 移动端虚拟方向键 - 默认隐藏 */
+.touch-controls[data-v-1262a641] {
+  display: none;
+}
+.touch-controls-grid[data-v-1262a641] {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 8px;
+  width: 180px;
+  height: 180px;
+  margin: 16px auto;
+  justify-items: center;
+  align-items: center;
+}
+.touch-placeholder[data-v-1262a641] {
+  width: 56px;
+  height: 56px;
+}
+.touch-btn[data-v-1262a641] {
+  width: 56px;
+  height: 56px;
+  border: 2px solid #0f3460;
+  border-radius: 12px;
+  background: #12122a;
+  color: #409eff;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  transition: background-color 0.1s, border-color 0.1s;
+}
+.touch-btn[data-v-1262a641]:active {
+  background: #0f3460;
+  border-color: #409eff;
+}
+
+/* 响应式 - 手机端 */
+@media screen and (max-width: 768px) {
+.game-container[data-v-1262a641] {
+    padding: 12px;
+    border-radius: 8px;
+}
+.game-header h2[data-v-1262a641] {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+.game-info[data-v-1262a641] {
+    gap: 12px;
+    margin-bottom: 10px;
+}
+.game-info span[data-v-1262a641] {
+    font-size: 13px;
+}
+.game-canvas-wrapper[data-v-1262a641] {
+    margin-bottom: 10px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.game-actions[data-v-1262a641] {
+    gap: 8px;
+    margin-bottom: 12px;
+}
+.game-actions .el-button[data-v-1262a641] {
+    min-width: 70px;
+    font-size: 13px;
+    padding: 8px 12px;
+}
+.game-instructions[data-v-1262a641] {
+    font-size: 11px;
+    padding: 8px;
+}
+
+  /* 显示虚拟方向键 */
+.touch-controls[data-v-1262a641] {
+    display: block;
+}
+}
+

@@ -1,0 +1,200 @@
+
+.tetris-layout[data-v-234241c8] {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: center;
+}
+.tetris-side-panel[data-v-234241c8] {
+  min-width: 120px;
+}
+.panel-box[data-v-234241c8] {
+  background: #1a1a2e;
+  border: 1px solid #0f3460;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+.panel-title[data-v-234241c8] {
+  color: #409EFF;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.next-preview[data-v-234241c8] {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+.preview-grid[data-v-234241c8] {
+  display: grid;
+  grid-template-columns: repeat(4, 14px);
+  grid-template-rows: repeat(3, 14px);
+  gap: 1px;
+}
+.preview-cell[data-v-234241c8] {
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+}
+.tetris-board-wrapper[data-v-234241c8] {
+  padding: 12px !important;
+}
+.tetris-board[data-v-234241c8] {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 2px solid #0f3460;
+  line-height: 0;
+}
+.tetris-row[data-v-234241c8] {
+  display: flex;
+}
+.tetris-cell[data-v-234241c8] {
+  width: 28px;
+  height: 28px;
+  box-sizing: border-box;
+  border: 1px solid #0a0a1a;
+  transition: background-color 0.05s;
+}
+.controls-list[data-v-234241c8] {
+  font-size: 12px;
+  color: #aaa;
+}
+.control-item[data-v-234241c8] {
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+kbd[data-v-234241c8] {
+  background: #0a0a1a;
+  border: 1px solid #0f3460;
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 11px;
+  color: #409EFF;
+  font-family: monospace;
+  min-width: 20px;
+  text-align: center;
+}
+
+/* 桌面端隐藏虚拟控制按钮 */
+.desktop-only[data-v-234241c8] {
+  display: block;
+}
+.mobile-controls[data-v-234241c8] {
+  display: none;
+}
+
+/* ========== 移动端响应式 ========== */
+@media screen and (max-width: 768px) {
+.desktop-only[data-v-234241c8] {
+    display: none !important;
+}
+
+  /* 布局改为纵向居中 */
+.tetris-layout[data-v-234241c8] {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+  /* "下一个"预览在手机端改为横向 */
+.side-panel-left[data-v-234241c8] {
+    min-width: auto;
+}
+.side-panel-left .panel-box[data-v-234241c8] {
+    margin-bottom: 0;
+}
+.side-panel-left .next-preview[data-v-234241c8] {
+    flex-direction: row;
+    gap: 4px;
+}
+.side-panel-left .preview-grid[data-v-234241c8] {
+    grid-template-columns: repeat(4, 12px);
+    grid-template-rows: repeat(3, 12px);
+    gap: 1px;
+}
+.side-panel-left .preview-cell[data-v-234241c8] {
+    width: 12px;
+    height: 12px;
+}
+
+  /* 缩小棋盘格子 */
+.tetris-board-wrapper[data-v-234241c8] {
+    padding: 4px !important;
+}
+.tetris-cell[data-v-234241c8] {
+    width: 18px;
+    height: 18px;
+}
+
+  /* 虚拟控制按钮区域 */
+.mobile-controls[data-v-234241c8] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+.mobile-btn-row[data-v-234241c8] {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+.mobile-btn[data-v-234241c8] {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    border: 2px solid #0f3460;
+    background: #1a1a2e;
+    color: #409EFF;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.1s;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.mobile-btn[data-v-234241c8]:active {
+    background: #0f3460;
+    border-color: #409EFF;
+}
+.btn-start[data-v-234241c8] {
+    width: auto;
+    padding: 0 24px;
+    font-size: 14px;
+    height: 44px;
+}
+.btn-rotate-left[data-v-234241c8],
+  .btn-rotate-right[data-v-234241c8] {
+    color: #c183ff;
+}
+}
+
+/* 更小屏幕进一步优化 */
+@media screen and (max-width: 400px) {
+.tetris-cell[data-v-234241c8] {
+    width: 16px;
+    height: 16px;
+}
+.mobile-btn[data-v-234241c8] {
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+}
+

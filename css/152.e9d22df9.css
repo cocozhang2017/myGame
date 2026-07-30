@@ -1,0 +1,163 @@
+
+.chess-board[data-v-7cb2f546] {
+  display: inline-block;
+  border: 2px solid #0f3460;
+  background: #0a0a1a;
+  line-height: 0;
+  box-shadow: 0 0 24px rgba(64, 158, 255, 0.15);
+}
+.chess-row[data-v-7cb2f546] {
+  display: flex;
+}
+.chess-square[data-v-7cb2f546] {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  box-sizing: border-box;
+}
+.square-light[data-v-7cb2f546] { background-color: #f0d9b5;
+}
+.square-dark[data-v-7cb2f546] { background-color: #b58863;
+}
+
+/* 选中格子：蓝色边框 */
+.square-selected[data-v-7cb2f546] {
+  box-shadow: inset 0 0 0 3px #409EFF;
+}
+
+/* 格子高亮叠加层（不与边框 box-shadow 冲突） */
+.square-overlay[data-v-7cb2f546] {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+}
+.square-lastmove[data-v-7cb2f546] {
+  background: rgba(255, 213, 79, 0.35);
+}
+.square-check[data-v-7cb2f546] {
+  background: radial-gradient(circle at center,
+    rgba(255, 40, 40, 0.65) 0%,
+    rgba(255, 40, 40, 0.35) 55%,
+    rgba(255, 40, 40, 0) 100%);
+}
+
+/* 棋子：实心字形 + CSS 着色 */
+.piece[data-v-7cb2f546] {
+  font-size: 38px;
+  line-height: 1;
+  z-index: 2;
+  pointer-events: none;
+}
+.piece-white[data-v-7cb2f546] {
+  color: #ffffff;
+  text-shadow:
+    -1px -1px 0 #2a2a2a,
+    1px -1px 0 #2a2a2a,
+    -1px 1px 0 #2a2a2a,
+    1px 1px 0 #2a2a2a,
+    0 0 2px #000;
+}
+.piece-black[data-v-7cb2f546] {
+  color: #1a1a1a;
+  text-shadow:
+    -0.5px -0.5px 0 #555,
+    0.5px 0.5px 0 #555,
+    0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+/* 合法走法提示 */
+.move-dot[data-v-7cb2f546] {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(0, 170, 0, 0.55);
+  z-index: 3;
+  pointer-events: none;
+}
+.move-ring[data-v-7cb2f546] {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 4px solid rgba(225, 50, 50, 0.7);
+  background: transparent;
+  box-sizing: border-box;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* 坐标标注 */
+.coord[data-v-7cb2f546] {
+  position: absolute;
+  font-size: 10px;
+  font-weight: bold;
+  pointer-events: none;
+  z-index: 1;
+  line-height: 1;
+}
+.coord-rank[data-v-7cb2f546] { top: 2px; left: 3px;
+}
+.coord-file[data-v-7cb2f546] { bottom: 2px; right: 4px;
+}
+.coord-on-light[data-v-7cb2f546] { color: #b58863;
+}
+.coord-on-dark[data-v-7cb2f546] { color: #f0d9b5;
+}
+
+/* 状态文字 */
+.check-text[data-v-7cb2f546] { color: #ff5252 !important;
+}
+.ai-text[data-v-7cb2f546] { color: #FFC107 !important;
+}
+
+/* 走法历史列表 */
+.history-list[data-v-7cb2f546] {
+  max-height: 360px;
+  overflow-y: auto;
+  font-size: 14px;
+}
+.history-row[data-v-7cb2f546] {
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-bottom: 1px solid #2a2a3e;
+}
+.history-row[data-v-7cb2f546]:nth-child(odd) {
+  background: #14142a;
+}
+.history-num[data-v-7cb2f546] {
+  width: 36px;
+  color: #888;
+}
+.history-move[data-v-7cb2f546] {
+  flex: 1;
+  padding: 0 6px;
+  font-family: 'Consolas', 'Courier New', monospace;
+}
+.history-white[data-v-7cb2f546] { color: #f0d9b5;
+}
+.history-black[data-v-7cb2f546] { color: #b58863;
+}
+.history-empty[data-v-7cb2f546] {
+  text-align: center;
+  color: #888;
+  padding: 20px;
+}
+
+/* 游戏结束弹窗 */
+.game-over-body[data-v-7cb2f546] {
+  text-align: center;
+  padding: 10px 0;
+}
+.game-over-text[data-v-7cb2f546] {
+  font-size: 20px;
+  color: #409EFF;
+  font-weight: bold;
+}
+

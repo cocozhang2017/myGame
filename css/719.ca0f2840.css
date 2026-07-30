@@ -1,0 +1,102 @@
+
+.mine-grid[data-v-56dad16a] {
+  display: inline-block;
+  border: 2px solid #0f3460;
+  line-height: 0;
+}
+.mine-row[data-v-56dad16a] {
+  display: flex;
+}
+.mine-tile[data-v-56dad16a] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-weight: bold;
+  user-select: none;
+  border: 1px solid #1a2a4a;
+  transition: background-color 0.1s;
+}
+.mine-tile[data-v-56dad16a]:hover:not(.tile-revealed) {
+  background-color: #2a2a4a !important;
+}
+
+/* Hidden tile */
+.tile-hidden[data-v-56dad16a] {
+  background-color: #1e2d4a;
+}
+
+/* Flagged tile */
+.tile-flagged[data-v-56dad16a] {
+  background-color: #1e3d2a;
+}
+
+/* Question tile */
+.tile-question[data-v-56dad16a] {
+  background-color: #3d3d1e;
+  color: #FFD700;
+}
+
+/* Revealed tile */
+.tile-revealed[data-v-56dad16a] {
+  background-color: #0d0d1a;
+  cursor: default;
+}
+
+/* Empty revealed */
+.tile-empty[data-v-56dad16a] {
+  background-color: #0d0d1a;
+}
+
+/* Number colors */
+.tile-num-1[data-v-56dad16a] { color: #0000FF;
+}
+.tile-num-2[data-v-56dad16a] { color: #008000;
+}
+.tile-num-3[data-v-56dad16a] { color: #FF0000;
+}
+.tile-num-4[data-v-56dad16a] { color: #000080;
+}
+.tile-num-5[data-v-56dad16a] { color: #800000;
+}
+.tile-num-6[data-v-56dad16a] { color: #008080;
+}
+.tile-num-7[data-v-56dad16a] { color: #000000;
+}
+.tile-num-8[data-v-56dad16a] { color: #808080;
+}
+
+/* Mine */
+.tile-mine[data-v-56dad16a] {
+  background-color: #2a0a0a;
+}
+.tile-mine-clicked[data-v-56dad16a] {
+  background-color: #FF0000 !important;
+}
+.tile-mine-shown[data-v-56dad16a] {
+  background-color: #1a0a0a;
+}
+
+/* Face button */
+.face-btn[data-v-56dad16a] {
+  font-size: 32px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1a1a2e;
+  border: 2px solid #0f3460;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.1s;
+}
+.face-btn[data-v-56dad16a]:hover {
+  transform: scale(1.1);
+}
+.face-btn[data-v-56dad16a]:active {
+  transform: scale(0.95);
+}
+

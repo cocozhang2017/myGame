@@ -1,0 +1,205 @@
+
+.game-container[data-v-38e00344] {
+  background: #0a0a1a;
+  border: 2px solid #0f3460;
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.game-header h2[data-v-38e00344] {
+  color: #409eff;
+  margin: 0 0 12px 0;
+  text-align: center;
+  font-size: 22px;
+}
+.game-info[data-v-38e00344] {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.game-info .info-item[data-v-38e00344] {
+  background: #1a1a2e;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  border: 1px solid #0f3460;
+  color: #ccc;
+}
+.game-info .info-item span[data-v-38e00344] {
+  color: #409eff;
+  font-weight: bold;
+}
+.game-actions[data-v-38e00344] {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.game-canvas-wrapper[data-v-38e00344] {
+  position: relative;
+  min-height: 540px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* 卡片网格：CSS Grid 4 列布局 */
+.card-grid[data-v-38e00344] {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  gap: 16px;
+  justify-content: center;
+}
+
+/* 单张卡片约 100px × 120px */
+.card[data-v-38e00344] {
+  width: 100px;
+  height: 120px;
+  perspective: 1000px;
+  cursor: pointer;
+  animation: cardEnter-38e00344 0.4s ease both;
+}
+.card--disabled[data-v-38e00344] {
+  cursor: not-allowed;
+}
+.card-inner[data-v-38e00344] {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: all 0.6s ease;
+  transform-style: preserve-3d;
+}
+
+/* card--revealed: Y 轴 180 度翻转 */
+.card--revealed .card-inner[data-v-38e00344] {
+  transform: rotateY(180deg);
+}
+.card-face[data-v-38e00344] {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 2px solid #0f3460;
+  background: #1a1a2e;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  user-select: none;
+}
+
+/* 背面：问号图标 */
+.card-back[data-v-38e00344] {
+  font-size: 40px;
+  color: #409eff;
+}
+
+/* 正面：emoji */
+.card-front[data-v-38e00344] {
+  font-size: 48px;
+  transform: rotateY(180deg);
+  background: #16213e;
+}
+
+/* 默认背面 hover 效果 */
+.card:not(.card--disabled):hover .card-face[data-v-38e00344] {
+  border-color: #409eff;
+  box-shadow: 0 0 12px rgba(64, 158, 255, 0.5);
+}
+
+/* 配对成功：绿色边框 + 光晕 */
+.card--success .card-face[data-v-38e00344] {
+  border-color: #67c23a;
+  box-shadow: 0 0 16px rgba(103, 194, 58, 0.7);
+}
+@keyframes cardEnter-38e00344 {
+from {
+    opacity: 0;
+    transform: translateY(-16px) scale(0.85);
+}
+to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+}
+.loading-tip[data-v-38e00344] {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #409eff;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+.game-instructions[data-v-38e00344] {
+  text-align: center;
+  color: #888;
+  font-size: 13px;
+  padding: 12px;
+  border-top: 1px solid #1a1a3a;
+  margin-top: 16px;
+}
+.game-instructions p[data-v-38e00344] {
+  margin: 0;
+}
+.game-instructions strong[data-v-38e00344] {
+  color: #409eff;
+}
+
+/* 胜利弹窗内容 */
+.win-content[data-v-38e00344] {
+  text-align: center;
+}
+.win-emoji[data-v-38e00344] {
+  font-size: 56px;
+  margin-bottom: 8px;
+}
+.win-text[data-v-38e00344] {
+  color: #ccc;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+.win-stats[data-v-38e00344] {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.win-stats .info-item[data-v-38e00344] {
+  background: #1a1a2e;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  border: 1px solid #0f3460;
+  color: #ccc;
+}
+.win-stats .info-item span[data-v-38e00344] {
+  color: #409eff;
+  font-weight: bold;
+}
+
+/* 弹窗深色主题适配 */
+[data-v-38e00344] .win-dialog {
+  background: #0a0a1a;
+  border: 2px solid #409eff;
+  border-radius: 12px;
+}
+[data-v-38e00344] .win-dialog .el-dialog__title {
+  color: #409eff;
+  font-size: 20px;
+}
+[data-v-38e00344] .win-dialog .el-dialog__header {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #0f3460;
+}
+[data-v-38e00344] .win-dialog .el-dialog__body {
+  padding: 24px 20px;
+}
+[data-v-38e00344] .win-dialog .el-dialog__footer {
+  padding-top: 12px;
+  border-top: 1px solid #0f3460;
+}
+

@@ -1,0 +1,195 @@
+
+.game-container[data-v-5346c754] {
+  background: #0a0a1a;
+  border: 2px solid #0f3460;
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 560px;
+  margin: 0 auto;
+}
+.game-header[data-v-5346c754] {
+  text-align: center;
+  margin-bottom: 16px;
+}
+.game-header h2[data-v-5346c754] {
+  color: #409EFF;
+  font-size: 26px;
+  margin: 0 0 6px 0;
+  letter-spacing: 2px;
+}
+.subtitle[data-v-5346c754] {
+  color: #888;
+  font-size: 13px;
+  margin: 0;
+}
+.game-info[data-v-5346c754] {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.game-info .info-item[data-v-5346c754] {
+  background: #1a1a2e;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  border: 1px solid #0f3460;
+  color: #aaa;
+}
+.game-info .info-item span[data-v-5346c754] {
+  color: #409EFF;
+  font-weight: bold;
+  margin-left: 4px;
+}
+.game-actions[data-v-5346c754] {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.game-canvas-wrapper[data-v-5346c754] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px;
+  user-select: none;
+  touch-action: none;
+}
+.board[data-v-5346c754] {
+  --cell: 92px;
+  --gap: 12px;
+  display: grid;
+  grid-template-columns: repeat(4, var(--cell));
+  grid-template-rows: repeat(4, var(--cell));
+  gap: var(--gap);
+  background: #1a1a2e;
+  padding: var(--gap);
+  border-radius: 12px;
+  border: 1px solid #0f3460;
+  box-shadow: inset 0 0 24px rgba(0, 0, 0, 0.5);
+}
+.tile[data-v-5346c754] {
+  width: var(--cell);
+  height: var(--cell);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-weight: 700;
+  box-sizing: border-box;
+  transition: background-color 0.12s ease;
+}
+.tile-value[data-v-5346c754] {
+  line-height: 1;
+}
+.tile-empty[data-v-5346c754] {
+  background: #23234a;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.35);
+}
+
+/* 新生成方块：出现动画 */
+.tile-new[data-v-5346c754] {
+  animation: tileAppear-5346c754 0.2s ease;
+}
+
+/* 刚合并方块：高亮放大动画 */
+.tile-merged[data-v-5346c754] {
+  animation: tilePop-5346c754 0.22s ease;
+  z-index: 2;
+}
+
+/* 3072 金色方块：持续微光 */
+.tile-gold[data-v-5346c754] {
+  box-shadow: 0 0 16px rgba(255, 215, 0, 0.7);
+  animation: goldGlow-5346c754 1.6s ease-in-out infinite;
+}
+@keyframes tileAppear-5346c754 {
+0% {
+    transform: scale(0);
+    opacity: 0;
+}
+60% {
+    transform: scale(1.12);
+    opacity: 1;
+}
+100% {
+    transform: scale(1);
+}
+}
+@keyframes tilePop-5346c754 {
+0% {
+    transform: scale(1);
+}
+50% {
+    transform: scale(1.2);
+    filter: brightness(1.25);
+}
+100% {
+    transform: scale(1);
+}
+}
+@keyframes goldGlow-5346c754 {
+0%, 100% {
+    box-shadow: 0 0 12px rgba(255, 215, 0, 0.5);
+}
+50% {
+    box-shadow: 0 0 24px rgba(255, 215, 0, 0.9);
+}
+}
+.game-instructions[data-v-5346c754] {
+  text-align: center;
+  color: #888;
+  font-size: 13px;
+  padding: 12px;
+  border-top: 1px solid #1a1a3a;
+  margin-top: 8px;
+  line-height: 1.7;
+}
+.game-instructions strong[data-v-5346c754] {
+  color: #409EFF;
+}
+.game-instructions em[data-v-5346c754] {
+  color: #ddd;
+  font-style: normal;
+  font-weight: bold;
+}
+.dialog-body[data-v-5346c754] {
+  text-align: center;
+}
+.dialog-score[data-v-5346c754] {
+  font-size: 22px;
+  color: #409EFF;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.dialog-sub[data-v-5346c754] {
+  color: #ccc;
+  font-size: 16px;
+}
+
+/* ElementUI 对话框深色主题适配 */
+[data-v-5346c754] .el-dialog {
+  background: #0a0a1a;
+  border: 2px solid #0f3460;
+  border-radius: 12px;
+}
+[data-v-5346c754] .el-dialog__title {
+  color: #409EFF;
+  font-size: 20px;
+}
+[data-v-5346c754] .el-dialog__body {
+  color: #ccc;
+}
+[data-v-5346c754] .el-dialog__headerbtn .el-dialog__close {
+  color: #888;
+}
+[data-v-5346c754] .el-dialog__headerbtn .el-dialog__close:hover {
+  color: #409EFF;
+}
+@media (max-width: 480px) {
+.board[data-v-5346c754] {
+    --cell: 66px;
+    --gap: 10px;
+}
+}
+
