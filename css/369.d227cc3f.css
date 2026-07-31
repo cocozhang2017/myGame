@@ -1,0 +1,269 @@
+
+.angrybirds-container[data-v-215c0b79] {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 24px 20px;
+}
+
+/* ===== 头部 ===== */
+.game-header[data-v-215c0b79] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.game-title[data-v-215c0b79] {
+  font-size: 36px;
+  font-weight: 900;
+  background: linear-gradient(135deg, #ef4444 0%, #f59e0b 50%, #eab308 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  letter-spacing: 1px;
+}
+.score-boxes[data-v-215c0b79] {
+  display: flex;
+  gap: 10px;
+}
+.score-box[data-v-215c0b79] {
+  background: linear-gradient(145deg, #fef3c7, #fde68a);
+  border-radius: 12px;
+  padding: 8px 16px;
+  text-align: center;
+  min-width: 72px;
+  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.25);
+}
+.score-box.best[data-v-215c0b79] {
+  background: linear-gradient(145deg, #fce7f3, #fbcfe8);
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.25);
+}
+.score-label[data-v-215c0b79] {
+  font-size: 11px;
+  font-weight: 700;
+  color: #92400e;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.score-box.best .score-label[data-v-215c0b79] {
+  color: #9d174d;
+}
+.score-value[data-v-215c0b79] {
+  font-size: 22px;
+  font-weight: 900;
+  color: #78350f;
+  line-height: 1.2;
+}
+.score-box.best .score-value[data-v-215c0b79] {
+  color: #831843;
+}
+
+/* ===== 副标题 ===== */
+.game-subheader[data-v-215c0b79] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.subtitle[data-v-215c0b79] {
+  font-size: 14px;
+  color: #9ca3af;
+  margin: 0;
+  font-weight: 500;
+}
+.new-game-btn[data-v-215c0b79] {
+  background: linear-gradient(135deg, #ef4444 0%, #f59e0b 100%);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 22px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(239, 68, 68, 0.35);
+  letter-spacing: 1px;
+}
+.new-game-btn[data-v-215c0b79]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(239, 68, 68, 0.45);
+}
+.new-game-btn[data-v-215c0b79]:active {
+  transform: translateY(0);
+}
+
+/* ===== 状态栏 ===== */
+.game-stats[data-v-215c0b79] {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.stat-item[data-v-215c0b79] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.stat-label[data-v-215c0b79] {
+  font-size: 12px;
+  font-weight: 600;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.stat-value[data-v-215c0b79] {
+  font-size: 22px;
+  font-weight: 900;
+  background: linear-gradient(135deg, #ef4444, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== 游戏画布 ===== */
+.canvas-wrapper[data-v-215c0b79] {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.game-canvas[data-v-215c0b79] {
+  border-radius: 16px;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.15),
+    0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  touch-action: none;
+}
+
+/* ===== 结果遮罩 ===== */
+.result-overlay[data-v-215c0b79] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+  animation: fadeIn-215c0b79 0.3s ease;
+}
+@keyframes fadeIn-215c0b79 {
+from { opacity: 0;
+}
+to { opacity: 1;
+}
+}
+.result-modal[data-v-215c0b79] {
+  background: linear-gradient(145deg, #1e1b4b, #312e81);
+  border-radius: 24px;
+  padding: 36px 40px;
+  text-align: center;
+  color: #fff;
+  max-width: 340px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  animation: slideUp-215c0b79 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+@keyframes slideUp-215c0b79 {
+from { transform: translateY(30px); opacity: 0;
+}
+to { transform: translateY(0); opacity: 1;
+}
+}
+.result-emoji[data-v-215c0b79] {
+  font-size: 64px;
+  margin-bottom: 12px;
+}
+.result-modal h2[data-v-215c0b79] {
+  font-size: 26px;
+  margin: 0 0 12px 0;
+  background: linear-gradient(135deg, #ef4444, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.result-modal p[data-v-215c0b79] {
+  font-size: 16px;
+  color: #c7d2fe;
+  margin: 0 0 24px 0;
+}
+.result-modal strong[data-v-215c0b79] {
+  color: #fde68a;
+  font-size: 22px;
+}
+.retry-btn[data-v-215c0b79] {
+  background: linear-gradient(135deg, #ef4444 0%, #f59e0b 100%);
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  padding: 14px 40px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 6px 20px rgba(239, 68, 68, 0.4);
+  letter-spacing: 2px;
+}
+.retry-btn[data-v-215c0b79]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(239, 68, 68, 0.5);
+}
+.retry-btn[data-v-215c0b79]:active {
+  transform: scale(0.96);
+}
+
+/* ===== 操作说明 ===== */
+.instructions[data-v-215c0b79] {
+  text-align: center;
+  margin-top: 8px;
+}
+.instructions p[data-v-215c0b79] {
+  font-size: 13px;
+  color: #9ca3af;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ===== 响应式 ===== */
+@media (max-width: 480px) {
+.angrybirds-container[data-v-215c0b79] {
+    padding: 16px 12px;
+}
+.game-title[data-v-215c0b79] {
+    font-size: 26px;
+}
+.score-box[data-v-215c0b79] {
+    padding: 6px 12px;
+    min-width: 60px;
+}
+.score-value[data-v-215c0b79] {
+    font-size: 18px;
+}
+.score-label[data-v-215c0b79] {
+    font-size: 10px;
+}
+.stat-value[data-v-215c0b79] {
+    font-size: 18px;
+}
+.game-stats[data-v-215c0b79] {
+    gap: 16px;
+}
+.new-game-btn[data-v-215c0b79] {
+    padding: 8px 18px;
+    font-size: 13px;
+}
+}
+
