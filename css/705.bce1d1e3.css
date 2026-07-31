@@ -1,0 +1,346 @@
+
+.game24-page[data-v-dd4f889a] {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  min-height: 100%;
+  position: relative;
+}
+
+/* ===== 顶部栏 ===== */
+.top-bar[data-v-dd4f889a] {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.level-info[data-v-dd4f889a] {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  min-width: 80px;
+}
+.game-title[data-v-dd4f889a] {
+  font-size: 42px;
+  font-weight: 900;
+  color: #F15B3C;
+  margin: 0;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 0 rgba(241, 91, 60, 0.15);
+}
+.top-actions[data-v-dd4f889a] {
+  display: flex;
+  gap: 8px;
+  min-width: 120px;
+  justify-content: flex-end;
+}
+.action-btn[data-v-dd4f889a] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 6px;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+.action-btn span[data-v-dd4f889a] {
+  font-size: 12px;
+  color: #333;
+  font-weight: 500;
+}
+.reset-btn[data-v-dd4f889a] {
+  color: #333;
+}
+.reset-btn svg[data-v-dd4f889a] {
+  width: 28px;
+  height: 28px;
+}
+.answer-btn[data-v-dd4f889a] {
+  background: #FFD700;
+  border-radius: 8px;
+  padding: 4px 8px;
+  color: #fff;
+}
+.answer-btn svg[data-v-dd4f889a] {
+  width: 28px;
+  height: 28px;
+  color: #fff;
+}
+.answer-btn span[data-v-dd4f889a] {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ===== 数字卡片 ===== */
+.number-grid[data-v-dd4f889a] {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 40px;
+  width: 280px;
+}
+.number-card[data-v-dd4f889a] {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 64px;
+  font-weight: 800;
+  color: #1a1a1a;
+  background: #D0F8F8;
+  border: none;
+  border-radius: 28px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  touch-action: manipulation;
+  box-shadow: 0 4px 12px rgba(0, 200, 200, 0.15);
+}
+.number-card[data-v-dd4f889a]:nth-child(1) {
+  background: #55F0E0;
+  box-shadow: 0 6px 20px rgba(85, 240, 224, 0.4);
+}
+.number-card[data-v-dd4f889a]:nth-child(2),
+.number-card[data-v-dd4f889a]:nth-child(3),
+.number-card[data-v-dd4f889a]:nth-child(4) {
+  background: #D0F8F8;
+}
+.number-card[data-v-dd4f889a]:hover:not(.merged) {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(85, 240, 224, 0.45);
+}
+.number-card[data-v-dd4f889a]:active:not(.merged) {
+  transform: scale(0.95);
+}
+.number-card.selected[data-v-dd4f889a] {
+  transform: scale(1.05);
+  box-shadow: 0 0 0 4px rgba(241, 91, 60, 0.5), 0 8px 24px rgba(85, 240, 224, 0.45);
+}
+.number-card.merged[data-v-dd4f889a] {
+  background: transparent;
+  color: transparent;
+  cursor: default;
+  box-shadow: none;
+  pointer-events: none;
+}
+
+/* ===== 运算符按钮 ===== */
+.op-row[data-v-dd4f889a] {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  width: 100%;
+  max-width: 320px;
+}
+.op-btn[data-v-dd4f889a] {
+  height: 60px;
+  font-size: 36px;
+  font-weight: 700;
+  color: #E65C2F;
+  background: #FCE8DC;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.op-btn[data-v-dd4f889a]:hover {
+  background: #FAD4BC;
+  transform: translateY(-2px);
+}
+.op-btn[data-v-dd4f889a]:active {
+  transform: scale(0.95);
+}
+.op-btn.active[data-v-dd4f889a] {
+  background: #E65C2F;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(230, 92, 47, 0.4);
+}
+
+/* ===== 弹窗 ===== */
+.modal-overlay[data-v-dd4f889a] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  backdrop-filter: blur(4px);
+}
+.modal-content[data-v-dd4f889a] {
+  background: #fff;
+  border-radius: 24px;
+  padding: 36px 28px 28px;
+  text-align: center;
+  max-width: 340px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  animation: modalIn-dd4f889a 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+@keyframes modalIn-dd4f889a {
+from {
+    opacity: 0;
+    transform: scale(0.85) translateY(20px);
+}
+to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+}
+.modal-icon[data-v-dd4f889a] {
+  font-size: 56px;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.modal-content h2[data-v-dd4f889a] {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 12px 0;
+}
+.solution-text[data-v-dd4f889a] {
+  font-size: 16px !important;
+  font-weight: 600;
+  color: #333 !important;
+  font-family: 'Consolas', 'Monaco', monospace;
+  background: #F5F7FA;
+  padding: 16px;
+  border-radius: 14px;
+  margin: 16px 0 !important;
+  word-break: break-all;
+  line-height: 1.5;
+}
+.modal-actions[data-v-dd4f889a] {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+.modal-btn[data-v-dd4f889a] {
+  flex: 1;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f2f5;
+  color: #333;
+}
+.modal-btn[data-v-dd4f889a]:hover {
+  background: #e4e7ed;
+  transform: translateY(-1px);
+}
+.modal-btn[data-v-dd4f889a]:active {
+  transform: scale(0.98);
+}
+.modal-btn.primary[data-v-dd4f889a] {
+  background: #55F0E0;
+  color: #1a1a1a;
+  font-weight: 700;
+}
+.modal-btn.primary[data-v-dd4f889a]:hover {
+  background: #44E8D8;
+}
+
+/* ===== 响应式 ===== */
+@media (max-width: 420px) {
+.game24-page[data-v-dd4f889a] {
+    padding: 16px 12px;
+}
+.level-info[data-v-dd4f889a] {
+    font-size: 15px;
+    min-width: 65px;
+}
+.game-title[data-v-dd4f889a] {
+    font-size: 32px;
+}
+.top-actions[data-v-dd4f889a] {
+    min-width: 100px;
+}
+.action-btn span[data-v-dd4f889a] {
+    font-size: 11px;
+}
+.reset-btn svg[data-v-dd4f889a],
+  .answer-btn svg[data-v-dd4f889a] {
+    width: 24px;
+    height: 24px;
+}
+.number-grid[data-v-dd4f889a] {
+    width: 240px;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+.number-card[data-v-dd4f889a] {
+    font-size: 52px;
+    border-radius: 22px;
+}
+.op-row[data-v-dd4f889a] {
+    gap: 10px;
+    max-width: 280px;
+}
+.op-btn[data-v-dd4f889a] {
+    height: 52px;
+    font-size: 30px;
+    border-radius: 14px;
+}
+.modal-content[data-v-dd4f889a] {
+    padding: 28px 20px 20px;
+}
+.modal-content h2[data-v-dd4f889a] {
+    font-size: 20px;
+}
+.solution-text[data-v-dd4f889a] {
+    font-size: 14px !important;
+    padding: 12px;
+}
+.modal-btn[data-v-dd4f889a] {
+    height: 44px;
+    font-size: 14px;
+}
+}
+@media (max-width: 340px) {
+.game-title[data-v-dd4f889a] {
+    font-size: 28px;
+}
+.number-grid[data-v-dd4f889a] {
+    width: 210px;
+    gap: 10px;
+}
+.number-card[data-v-dd4f889a] {
+    font-size: 44px;
+    border-radius: 18px;
+}
+.op-btn[data-v-dd4f889a] {
+    height: 48px;
+    font-size: 26px;
+}
+}
+
