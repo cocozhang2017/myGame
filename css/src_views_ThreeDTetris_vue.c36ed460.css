@@ -1,0 +1,286 @@
+/*!**********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/views/ThreeDTetris.vue?vue&type=style&index=0&id=72a47c4e&scoped=true&lang=css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************/
+
+.three-d-wrapper[data-v-72a47c4e] {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+.next-preview[data-v-72a47c4e] {
+  background: #0a0a1a;
+  border: 1px solid #0f3460;
+  border-radius: 8px;
+  padding: 12px;
+}
+.next-label[data-v-72a47c4e] {
+  color: #409EFF;
+  font-size: 12px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.next-cube-grid[data-v-72a47c4e] {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.next-row[data-v-72a47c4e] {
+  display: flex;
+  gap: 2px;
+}
+.next-cell[data-v-72a47c4e] {
+  width: 18px;
+  height: 18px;
+  border-radius: 2px;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+.scene-3d[data-v-72a47c4e] {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  transform-style: preserve-3d;
+  transition: transform 0.3s;
+}
+.face[data-v-72a47c4e] {
+  position: absolute;
+  background: rgba(10, 10, 26, 0.85);
+  border: 1px solid #0f3460;
+  border-radius: 4px;
+}
+.face-label[data-v-72a47c4e] {
+  position: absolute;
+  top: -18px;
+  left: 0;
+  font-size: 10px;
+  color: #409EFF;
+}
+.face-bottom[data-v-72a47c4e] {
+  width: 180px;
+  height: 180px;
+  top: 70px;
+  left: 70px;
+  transform: rotateX(90deg) translateZ(0deg);
+}
+.face-left[data-v-72a47c4e] {
+  width: 180px;
+  height: 240px;
+  top: 40px;
+  left: 0;
+  transform: rotateY(-90deg) translateZ(70px);
+}
+.face-back[data-v-72a47c4e] {
+  width: 180px;
+  height: 240px;
+  top: 40px;
+  left: 70px;
+  transform: translateZ(90px);
+}
+.grid-2d[data-v-72a47c4e] {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  padding: 4px;
+  gap: 1px;
+}
+.face-bottom .grid-2d[data-v-72a47c4e] {
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+.face-left .grid-2d[data-v-72a47c4e] {
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+.face-back .grid-2d[data-v-72a47c4e] {
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+.cell-3d[data-v-72a47c4e] {
+  border-radius: 2px;
+  border: 1px solid rgba(255,255,255,0.08);
+  min-width: 0;
+  min-height: 0;
+}
+
+/* 桌面端隐藏虚拟控制按钮 */
+.desktop-only[data-v-72a47c4e] {
+  display: block;
+}
+.mobile-controls[data-v-72a47c4e] {
+  display: none;
+}
+
+/* ========== 移动端响应式 ========== */
+@media screen and (max-width: 768px) {
+.desktop-only[data-v-72a47c4e] {
+    display: none !important;
+}
+
+  /* 布局改为纵向居中 */
+.three-d-wrapper[data-v-72a47c4e] {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+  /* 缩小 next-preview */
+.next-preview[data-v-72a47c4e] {
+    padding: 8px;
+}
+.next-cell[data-v-72a47c4e] {
+    width: 14px;
+    height: 14px;
+}
+
+  /* 缩小 3D 场景 */
+.scene-3d[data-v-72a47c4e] {
+    width: 240px;
+    height: 240px;
+}
+.face-bottom[data-v-72a47c4e] {
+    width: 130px;
+    height: 130px;
+    top: 55px;
+    left: 55px;
+}
+.face-left[data-v-72a47c4e] {
+    width: 130px;
+    height: 180px;
+    top: 30px;
+    left: 0;
+    transform: rotateY(-90deg) translateZ(55px);
+}
+.face-back[data-v-72a47c4e] {
+    width: 130px;
+    height: 180px;
+    top: 30px;
+    left: 55px;
+    transform: translateZ(65px);
+}
+.face-label[data-v-72a47c4e] {
+    font-size: 9px;
+    top: -16px;
+}
+
+  /* 虚拟控制按钮区域 */
+.mobile-controls[data-v-72a47c4e] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+  /* 十字方向键布局 */
+.mobile-dpad[data-v-72a47c4e] {
+    display: grid;
+    grid-template-columns: 56px 56px 56px;
+    grid-template-rows: 56px 56px;
+    gap: 4px;
+    justify-content: center;
+}
+.btn-dpad-up[data-v-72a47c4e] {
+    grid-column: 2;
+    grid-row: 1;
+}
+.btn-dpad-left[data-v-72a47c4e] {
+    grid-column: 1;
+    grid-row: 2;
+}
+.btn-dpad-down[data-v-72a47c4e] {
+    grid-column: 2;
+    grid-row: 2;
+}
+.btn-dpad-right[data-v-72a47c4e] {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+  /* 按钮行 */
+.mobile-btn-row[data-v-72a47c4e] {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+  /* 通用按钮样式 */
+.mobile-btn[data-v-72a47c4e] {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    border: 2px solid #0f3460;
+    background: #1a1a2e;
+    color: #409EFF;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.1s;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.mobile-btn[data-v-72a47c4e]:active {
+    background: #0f3460;
+    border-color: #409EFF;
+}
+.btn-rotate[data-v-72a47c4e] {
+    color: #c183ff;
+}
+.btn-hard-drop[data-v-72a47c4e] {
+    width: auto;
+    padding: 0 32px;
+    font-size: 16px;
+    height: 48px;
+    color: #ea3323;
+    border-color: #ea3323;
+}
+.btn-hard-drop[data-v-72a47c4e]:active {
+    background: #ea3323;
+    color: #fff;
+}
+}
+
+/* 更小屏幕进一步优化 */
+@media screen and (max-width: 400px) {
+.scene-3d[data-v-72a47c4e] {
+    width: 200px;
+    height: 200px;
+}
+.face-bottom[data-v-72a47c4e] {
+    width: 110px;
+    height: 110px;
+    top: 45px;
+    left: 45px;
+}
+.face-left[data-v-72a47c4e] {
+    width: 110px;
+    height: 150px;
+    top: 25px;
+    left: 0;
+    transform: rotateY(-90deg) translateZ(45px);
+}
+.face-back[data-v-72a47c4e] {
+    width: 110px;
+    height: 150px;
+    top: 25px;
+    left: 45px;
+    transform: translateZ(55px);
+}
+.mobile-dpad[data-v-72a47c4e] {
+    grid-template-columns: 48px 48px 48px;
+    grid-template-rows: 48px 48px;
+}
+.mobile-btn[data-v-72a47c4e] {
+    width: 48px;
+    height: 48px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+}
+
