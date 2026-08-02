@@ -1,0 +1,391 @@
+
+.match3-container[data-v-1e3621e0] {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 24px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ===== 头部 ===== */
+.game-header[data-v-1e3621e0] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.game-title[data-v-1e3621e0] {
+  font-size: 38px;
+  font-weight: 900;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 50%, #feca57 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  text-shadow: none;
+  letter-spacing: 1px;
+}
+.score-boxes[data-v-1e3621e0] {
+  display: flex;
+  gap: 10px;
+}
+.score-box[data-v-1e3621e0] {
+  background: linear-gradient(145deg, #fef3c7, #fde68a);
+  border-radius: 12px;
+  padding: 8px 16px;
+  text-align: center;
+  min-width: 72px;
+  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.25);
+}
+.score-box.best[data-v-1e3621e0] {
+  background: linear-gradient(145deg, #fce7f3, #fbcfe8);
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.25);
+}
+.score-label[data-v-1e3621e0] {
+  font-size: 11px;
+  font-weight: 700;
+  color: #92400e;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.score-box.best .score-label[data-v-1e3621e0] {
+  color: #9d174d;
+}
+.score-value[data-v-1e3621e0] {
+  font-size: 22px;
+  font-weight: 900;
+  color: #78350f;
+  line-height: 1.2;
+}
+.score-box.best .score-value[data-v-1e3621e0] {
+  color: #831843;
+}
+
+/* ===== 副标题 ===== */
+.game-subheader[data-v-1e3621e0] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.subtitle[data-v-1e3621e0] {
+  font-size: 14px;
+  color: #9ca3af;
+  margin: 0;
+  font-weight: 500;
+}
+.new-game-btn[data-v-1e3621e0] {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 22px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(240, 147, 251, 0.4);
+  letter-spacing: 1px;
+}
+.new-game-btn[data-v-1e3621e0]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(240, 147, 251, 0.5);
+}
+.new-game-btn[data-v-1e3621e0]:active {
+  transform: translateY(0);
+}
+
+/* ===== 状态栏 ===== */
+.game-stats[data-v-1e3621e0] {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 16px;
+}
+.stat-item[data-v-1e3621e0] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.stat-label[data-v-1e3621e0] {
+  font-size: 12px;
+  font-weight: 600;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.stat-value[data-v-1e3621e0] {
+  font-size: 28px;
+  font-weight: 900;
+  background: linear-gradient(135deg, #f093fb, #f5576c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== 游戏面板 ===== */
+.board-wrapper[data-v-1e3621e0] {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.board[data-v-1e3621e0] {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px;
+  background: linear-gradient(145deg, #fdf4ff, #fae8ff);
+  border-radius: 16px;
+  box-shadow:
+    0 8px 32px rgba(236, 72, 153, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  width: 100%;
+  max-width: 460px;
+  aspect-ratio: 1 / 1;
+  transition: opacity 0.2s;
+}
+.board-disabled[data-v-1e3621e0] {
+  opacity: 0.85;
+}
+.board-row[data-v-1e3621e0] {
+  display: flex;
+  gap: 4px;
+  flex: 1;
+}
+.gem-cell[data-v-1e3621e0] {
+  flex: 1;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.15s ease;
+  position: relative;
+}
+.gem-cell[data-v-1e3621e0]:hover {
+  transform: scale(1.05);
+}
+.gem-cell.gem-selected .gem[data-v-1e3621e0] {
+  transform: scale(1.1);
+  box-shadow:
+    0 0 0 3px #f59e0b,
+    0 0 20px rgba(245, 158, 11, 0.5);
+}
+.gem-cell.gem-hint .gem[data-v-1e3621e0] {
+  animation: hintPulse-1e3621e0 0.8s ease-in-out infinite;
+}
+.gem-cell.gem-matched .gem[data-v-1e3621e0] {
+  animation: matchPop-1e3621e0 0.3s ease forwards;
+}
+.gem-cell.gem-falling .gem[data-v-1e3621e0] {
+  animation: gemFall-1e3621e0 0.3s ease;
+}
+@keyframes hintPulse-1e3621e0 {
+0%, 100% { transform: scale(1);
+}
+50% { transform: scale(1.1);
+}
+}
+@keyframes matchPop-1e3621e0 {
+0% { transform: scale(1); opacity: 1;
+}
+50% { transform: scale(1.3); opacity: 0.8;
+}
+100% { transform: scale(0); opacity: 0;
+}
+}
+@keyframes gemFall-1e3621e0 {
+0% { transform: translateY(-20px); opacity: 0;
+}
+100% { transform: translateY(0); opacity: 1;
+}
+}
+
+/* ===== 宝石样式 ===== */
+.gem[data-v-1e3621e0] {
+  width: 85%;
+  height: 85%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  overflow: hidden;
+}
+.gem-inner[data-v-1e3621e0] {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+.gem-icon[data-v-1e3621e0] {
+  font-size: clamp(20px, 5vmin, 36px);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+}
+.gem-shine[data-v-1e3621e0] {
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  width: 40%;
+  height: 25%;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  filter: blur(4px);
+  z-index: 1;
+}
+.gem-1[data-v-1e3621e0] { background: linear-gradient(145deg, #ff6b6b, #ee5a5a); box-shadow: 0 4px 12px rgba(255, 107, 107, 0.4);
+}
+.gem-2[data-v-1e3621e0] { background: linear-gradient(145deg, #4ecdc4, #3dbdb5); box-shadow: 0 4px 12px rgba(78, 205, 196, 0.4);
+}
+.gem-3[data-v-1e3621e0] { background: linear-gradient(145deg, #ffe66d, #f6d94e); box-shadow: 0 4px 12px rgba(255, 230, 109, 0.4);
+}
+.gem-4[data-v-1e3621e0] { background: linear-gradient(145deg, #a855f7, #9333ea); box-shadow: 0 4px 12px rgba(168, 85, 247, 0.4);
+}
+.gem-5[data-v-1e3621e0] { background: linear-gradient(145deg, #60a5fa, #3b82f6); box-shadow: 0 4px 12px rgba(96, 165, 250, 0.4);
+}
+.gem-6[data-v-1e3621e0] { background: linear-gradient(145deg, #f472b6, #ec4899); box-shadow: 0 4px 12px rgba(244, 114, 182, 0.4);
+}
+
+/* ===== 游戏结束遮罩 ===== */
+.game-over-overlay[data-v-1e3621e0] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+  animation: fadeIn-1e3621e0 0.3s ease;
+}
+@keyframes fadeIn-1e3621e0 {
+from { opacity: 0;
+}
+to { opacity: 1;
+}
+}
+.game-over-modal[data-v-1e3621e0] {
+  background: linear-gradient(145deg, #1e1b4b, #312e81);
+  border-radius: 24px;
+  padding: 36px 40px;
+  text-align: center;
+  color: #fff;
+  max-width: 340px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  animation: slideUp-1e3621e0 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+@keyframes slideUp-1e3621e0 {
+from { transform: translateY(30px); opacity: 0;
+}
+to { transform: translateY(0); opacity: 1;
+}
+}
+.game-over-emoji[data-v-1e3621e0] {
+  font-size: 64px;
+  margin-bottom: 12px;
+}
+.game-over-modal h2[data-v-1e3621e0] {
+  font-size: 28px;
+  margin: 0 0 12px 0;
+  background: linear-gradient(135deg, #f093fb, #f5576c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.game-over-modal p[data-v-1e3621e0] {
+  font-size: 16px;
+  color: #c7d2fe;
+  margin: 0 0 24px 0;
+}
+.game-over-modal strong[data-v-1e3621e0] {
+  color: #fde68a;
+  font-size: 22px;
+}
+.retry-btn[data-v-1e3621e0] {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  padding: 14px 40px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 6px 20px rgba(240, 147, 251, 0.4);
+  letter-spacing: 2px;
+}
+.retry-btn[data-v-1e3621e0]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(240, 147, 251, 0.5);
+}
+.retry-btn[data-v-1e3621e0]:active {
+  transform: scale(0.96);
+}
+
+/* ===== 操作说明 ===== */
+.instructions[data-v-1e3621e0] {
+  text-align: center;
+  margin-top: 8px;
+}
+.instructions p[data-v-1e3621e0] {
+  font-size: 13px;
+  color: #9ca3af;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ===== 响应式 ===== */
+@media (max-width: 480px) {
+.match3-container[data-v-1e3621e0] {
+    padding: 16px 12px;
+}
+.game-title[data-v-1e3621e0] {
+    font-size: 28px;
+}
+.score-box[data-v-1e3621e0] {
+    padding: 6px 12px;
+    min-width: 60px;
+}
+.score-value[data-v-1e3621e0] {
+    font-size: 18px;
+}
+.score-label[data-v-1e3621e0] {
+    font-size: 10px;
+}
+.stat-value[data-v-1e3621e0] {
+    font-size: 22px;
+}
+.game-stats[data-v-1e3621e0] {
+    gap: 20px;
+}
+.board[data-v-1e3621e0] {
+    padding: 8px;
+    gap: 3px;
+}
+.board-row[data-v-1e3621e0] {
+    gap: 3px;
+}
+.gem-icon[data-v-1e3621e0] {
+    font-size: clamp(16px, 4.5vmin, 28px);
+}
+.new-game-btn[data-v-1e3621e0] {
+    padding: 8px 18px;
+    font-size: 13px;
+}
+}
+

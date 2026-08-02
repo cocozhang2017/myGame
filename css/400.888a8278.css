@@ -1,0 +1,360 @@
+
+.airplane-battle-page[data-v-358df95d] {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
+  padding: 10px;
+  box-sizing: border-box;
+}
+.top-bar[data-v-358df95d] {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+.score-info[data-v-358df95d],
+.best-info[data-v-358df95d] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.score-label[data-v-358df95d],
+.best-label[data-v-358df95d] {
+  font-size: 12px;
+  color: #aaa;
+  margin-bottom: 2px;
+}
+.score-value[data-v-358df95d] {
+  font-size: 22px;
+  font-weight: bold;
+  color: #00d4ff;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+.best-value[data-v-358df95d] {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffd700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+.game-title[data-v-358df95d] {
+  font-size: 20px;
+  color: #fff;
+  margin: 0;
+  text-shadow: 0 0 10px rgba(100, 150, 255, 0.5);
+}
+.game-container[data-v-358df95d] {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 2 / 3;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 150, 255, 0.3);
+  touch-action: none;
+  box-sizing: border-box;
+}
+.game-canvas[data-v-358df95d] {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: #0a0a2e;
+  cursor: pointer;
+}
+
+/* HUD */
+.hud[data-v-358df95d] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  pointer-events: none;
+}
+.hud-left[data-v-358df95d] {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.lives[data-v-358df95d] {
+  display: flex;
+  gap: 3px;
+}
+.life-icon[data-v-358df95d] {
+  font-size: 20px;
+  filter: drop-shadow(0 0 3px #ff6b6b);
+}
+.bombs[data-v-358df95d] {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.bomb-icon[data-v-358df95d] {
+  font-size: 18px;
+}
+.bomb-count[data-v-358df95d] {
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+.hud-right[data-v-358df95d] {
+  pointer-events: auto;
+}
+.pause-btn[data-v-358df95d] {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.pause-btn[data-v-358df95d]:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+.shield-indicator[data-v-358df95d],
+.double-fire-indicator[data-v-358df95d] {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.shield-indicator[data-v-358df95d] {
+  top: 50px;
+  border: 1px solid #3498db;
+}
+.double-fire-indicator[data-v-358df95d] {
+  top: 75px;
+  border: 1px solid #ffa502;
+}
+
+/* Overlay 通用样式 */
+.overlay[data-v-358df95d] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 10;
+}
+.overlay-content[data-v-358df95d] {
+  text-align: center;
+  color: #fff;
+  padding: 30px;
+}
+.plane-icon[data-v-358df95d] {
+  font-size: 64px;
+  margin-bottom: 15px;
+  animation: float-358df95d 2s ease-in-out infinite;
+}
+@keyframes float-358df95d {
+0%, 100% { transform: translateY(0);
+}
+50% { transform: translateY(-10px);
+}
+}
+.overlay-content h2[data-v-358df95d] {
+  font-size: 28px;
+  margin: 0 0 15px 0;
+  text-shadow: 0 0 20px rgba(0, 150, 255, 0.8);
+}
+.instruction[data-v-358df95d] {
+  color: #aaa;
+  margin: 10px 0 20px 0;
+  font-size: 14px;
+}
+.start-btn[data-v-358df95d],
+.resume-btn[data-v-358df95d],
+.restart-btn[data-v-358df95d] {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 10px auto;
+  padding: 14px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #00d4ff, #0088cc);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 15px rgba(0, 150, 255, 0.4);
+}
+.start-btn[data-v-358df95d]:hover,
+.resume-btn[data-v-358df95d]:hover,
+.restart-btn[data-v-358df95d]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 150, 255, 0.6);
+}
+.restart-btn[data-v-358df95d] {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a5a);
+  box-shadow: 0 4px 15px rgba(255, 100, 100, 0.4);
+}
+.restart-btn[data-v-358df95d]:hover {
+  box-shadow: 0 6px 20px rgba(255, 100, 100, 0.6);
+}
+.controls-hint[data-v-358df95d] {
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+.controls-hint p[data-v-358df95d] {
+  margin: 0;
+  font-size: 13px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* 游戏结束面板 */
+.game-over-panel[data-v-358df95d] {
+  background: rgba(20, 20, 40, 0.95);
+  border: 2px solid #ff6b6b;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  color: #fff;
+  min-width: 260px;
+  box-shadow: 0 0 40px rgba(255, 100, 100, 0.3);
+}
+.game-over-panel h2[data-v-358df95d] {
+  font-size: 28px;
+  margin: 0 0 20px 0;
+  color: #ff6b6b;
+  text-shadow: 0 0 10px rgba(255, 100, 100, 0.5);
+}
+.score-rows[data-v-358df95d] {
+  margin-bottom: 15px;
+}
+.score-row[data-v-358df95d] {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.score-row[data-v-358df95d]:last-child {
+  border-bottom: none;
+}
+.score-row-label[data-v-358df95d] {
+  color: #aaa;
+}
+.score-row-value[data-v-358df95d] {
+  font-weight: bold;
+  font-size: 18px;
+}
+.new-best[data-v-358df95d] {
+  color: #ffd700;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 10px 0;
+  animation: pulse-358df95d 1s ease-in-out infinite;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+@keyframes pulse-358df95d {
+0%, 100% { transform: scale(1);
+}
+50% { transform: scale(1.1);
+}
+}
+.bottom-hint[data-v-358df95d] {
+  margin-top: 15px;
+  color: #888;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* 响应式 */
+@media (max-width: 500px) {
+.top-bar[data-v-358df95d] {
+    padding: 8px 12px;
+}
+.game-title[data-v-358df95d] {
+    font-size: 16px;
+}
+.score-value[data-v-358df95d] {
+    font-size: 18px;
+}
+.best-value[data-v-358df95d] {
+    font-size: 14px;
+}
+.overlay-content[data-v-358df95d] {
+    padding: 20px;
+}
+.plane-icon[data-v-358df95d] {
+    font-size: 48px;
+}
+.overlay-content h2[data-v-358df95d] {
+    font-size: 22px;
+}
+.game-over-panel[data-v-358df95d] {
+    padding: 20px;
+    min-width: 220px;
+}
+}
+@media (max-width: 360px) {
+.airplane-battle-page[data-v-358df95d] {
+    padding: 6px;
+}
+.top-bar[data-v-358df95d] {
+    padding: 6px 10px;
+    margin-bottom: 6px;
+}
+.game-title[data-v-358df95d] {
+    font-size: 14px;
+}
+.score-value[data-v-358df95d] {
+    font-size: 16px;
+}
+.best-value[data-v-358df95d] {
+    font-size: 12px;
+}
+.score-label[data-v-358df95d],
+  .best-label[data-v-358df95d] {
+    font-size: 10px;
+}
+.overlay-content[data-v-358df95d] {
+    padding: 16px;
+}
+.plane-icon[data-v-358df95d] {
+    font-size: 40px;
+}
+.overlay-content h2[data-v-358df95d] {
+    font-size: 18px;
+}
+.game-over-panel[data-v-358df95d] {
+    padding: 16px;
+    min-width: 180px;
+}
+.game-over-panel h2[data-v-358df95d] {
+    font-size: 18px;
+}
+}
+
